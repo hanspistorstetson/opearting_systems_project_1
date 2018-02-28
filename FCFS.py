@@ -2,7 +2,7 @@ import random
 
 
 class FCFSProcesses:
-    def __init__(self, n=900, q=1):
+    def __init__(self, n=900):
         self.processes = [x for x in range(1, n + 1)]
         self.bt = [random.randrange(1, 100) for x in range(1, n + 1)]
         self.n = n
