@@ -12,14 +12,14 @@ class EDFProcesses:
         for i in range(0, self.n):
            self.q.append((self.dl[i], i))
         self.q.sort(key = operator.itemgetter(0))
-               
-        
+
+
     def findWaitingTime(self):
         self.wt[0] = 0
         for i in range(0, self.n):
             ((dlt, num)) = self.q[i]
             self.wt[i] = self.bt[num] + self.wt[i-1]
- 
+
 
     def findTurnaroundTime(self):
         for i in range(0, self.n):
@@ -44,5 +44,5 @@ class EDFProcesses:
         print("Average turnaround time:\t" + str(self.total_turnaround / self.n))
 
 
-processes = EDFProcesses()
+processes = EDFProcesses(n = 900)
 processes.findAvgTime()
