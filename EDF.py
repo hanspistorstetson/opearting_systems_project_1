@@ -2,9 +2,9 @@ import random
 import operator
 
 class EDFProcesses:
-    def __init__(self, n=900):
+    def __init__(self, n=9):
         self.processes = [x for x in range(1, n+1)]
-        t = 50
+        t = 100
         self.bt = [random.randrange(1, t) for x in range(1, n+1)]
         self.dl = [random.randrange(500, (t*(n+1))) for x in range(1, n+1)]
         self.q = list()
